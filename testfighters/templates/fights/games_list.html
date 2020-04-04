@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'games_list.css' %}">
+{% endblock css%}
+
+{% block content %}
+<div>
+
+    <h3> Games </h3>
+
+    {% for game in object_list %}
+    <div class="row games">
+
+        <div class="col-md-4">
+            <p> Host: {{ game.host }} </p>
+            <p> Topic: {{ game.topic }} </p>
+            <p> Hp: {{ game.host_hp }} </p>
+        </div>
+
+        <div class="col-md-4">
+            {% if game.password %}
+                <i class="fa fa-lock"></i> <input id="password_{{game.pk}}">
+                <p id="validation_{{game.pk}}"></p>
+            {% else %}
+                <p id="need_password_{{game.id}}">No password</p>
+            {% endif %}
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-outline-dark" id="{{game.id}}" onclick="join(this.id)"> Join </button>
+        </div>
+
+    </div>
+    {% empty %}
+     <div class="row games">
+         <div class="col-md-8">
+         <p> No games now. But you can create your own!</p>
+         </div>
+         <div class="col-md-4">
+             <a href="{% url 'games:new_game' %}">
+                <button class="btn btn-outline-dark"> New game </button>
+             </a>
+         </div>
+     </div>
+    {% endfor %}
+
+</div>
+{% endblock content %}
+
+{% block javascript %}
+        <script src="{% static 'games_list.js' %}"></script>
+{% endblock javascript %}

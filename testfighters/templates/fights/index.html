@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block css%}
+    <link rel="stylesheet" href=" {% static 'index.css' %}">
+{% endblock css%}
+
+
+
+{% block content %}
+    <div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                {% if user.is_authenticated%}
+                    {% if game_id != None %}
+                        <a href="{% url 'games:client' game_id %}">
+                            <button class="btn btn-outline-dark"> Continue </button>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'games:new_game' %}">
+                            <button class="btn btn-outline-dark"> New game</button>
+                        </a>
+
+
+                        <a href="{% url 'games:games_list' %}">
+                            <button id="btn2" class="btn btn-outline-dark"> Games ({{games}}) </button>
+                        </a>
+
+                    {% endif%}
+
+                <button id="btn3" class="btn btn-outline-dark" onclick="not_now()"> My statistic </button>
+
+                {% else %}
+                    <a href="{% url 'account_login' %}">
+                        <button class="btn btn-outline-dark"> Login at first </button>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block javascript %}
+    <script>
+        function not_now(){alert('not implemented')}
+    </script>
+{% endblock javascript%}

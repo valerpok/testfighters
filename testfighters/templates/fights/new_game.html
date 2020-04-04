@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div style="margin: 20px">
+    <div class="row">
+        <form action="/new-game/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create game" />
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

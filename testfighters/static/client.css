@@ -1,0 +1,215 @@
+/*
+div {
+    border: 1px black solid;
+}
+*/
+.col-xs-2 {
+    width: 16.66%;
+}
+
+.col-xs-3 {
+    width: 25%;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.row {
+    margin-left: 0px;
+}
+
+#game-container {
+
+}
+
+
+.btn {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space:normal !important;
+    word-wrap: break-word;
+}
+
+
+.btn:focus {
+   box-shadow: none;
+}
+
+.row {
+    width: 100% !important;
+}
+
+.item {
+    text-align: center;
+    font-size: 80%;
+}
+
+#sticky-head {
+     position: sticky;
+     top: 0px;
+}
+
+#stats {
+    width: 100%;
+    background-color: white;
+}
+
+#arena {
+    background-color: white;
+    height: 90px;
+    width: 100%;
+    font-size: 80%;
+    border-bottom: 1px solid black;
+}
+
+
+#blood_left_div {
+    height: 100%;
+}
+
+#blood_left {
+    height: 100%;
+    float: right;
+}
+
+#cowboy_left_div {
+    display: inline-block;
+    position: relative;
+}
+
+.cowboy_img_wrapper {
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+#cowboy_left {
+    height: 100%;
+    float: left;
+    display: none;
+}
+
+.info {
+    height: 100%;
+    position: relative;
+}
+
+.miss {
+
+    position: absolute;
+}
+
+.right {
+    position: absolute;
+}
+
+#host_miss, #host_right,
+#guest_miss, #guest_right
+{
+    display: none;
+}
+
+
+#guest_right, #host_right {
+    top: 80px;
+}
+
+#cowboy_right_info {
+    text-align: center;
+}
+
+#cowboy_right_div {
+
+}
+
+#cowboy_right {
+    height: 100%;
+    float: right;
+    display: none;
+    /* margin-right: 10%; */
+}
+
+
+#blood_right_div {
+    height: 100%;
+}
+
+#blood_right {
+    height: 100%;
+    float: left;
+}
+
+#button-attack-box {
+
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#btn-attack {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#question-text {
+    padding:10px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+#surrender-box {
+    padding: 20px;
+    text-align: center;
+}
+
+#surrender-button {
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,9 @@
+.games {
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.btn {
+    width: 50%;
+    margin: 10px;
+}

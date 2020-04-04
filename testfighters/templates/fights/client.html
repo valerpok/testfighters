@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static 'client.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+
+    {% if active == False %}
+    <div class="container">
+        <div id='game_ended' class="row">
+            <div class="col-xs-12">
+                <h2> This game ended! </h2>
+                {% if is_dead == True%}
+                <h3>(And you have died...)</h3>
+                {% else %}
+                <h3>(And you have won!)</h3>
+                {% endif%}
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+
+    <div id="game-container" data-game-id="{{ game_id }}"
+                             data-role="{{ role }}"
+                             data-active="{{ active }}"
+                             data-socket-url="{{ socket_url }}">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-xs-12">
+
+                <div id="greetings">
+                    <p>Hello! Breathe in. Breathe out. Count to 10. Still nothing? </p>
+                    <p>Refresh page or say "Все пропало!" to Valera. </p>
+                </div>
+
+                <div id="sticky-head">
+                    <div id="stats" class="row">
+                        <div class="col-xs-2" >
+                                <p class="item"><span id="host"></span></p>
+                        </div>
+
+                        <div class="col-xs-2" >
+                                <p class="item"> hp: <span id="host_hp"></span></p>
+                        </div>
+                        <div class="col-xs-2" style="border-right: 1px solid black">
+                                <p class="item"> power: <span id="host_shots" data-shots="0"></span></p>
+                        </div>
+
+                        <div class="col-xs-2">
+                                <p class="item"> power: <span id="guest_shots" data-shots="0"></span></p>
+                        </div>
+                        <div class="col-xs-2">
+                                <p class="item"> hp: <span id="guest_hp"> </span> </p>
+                        </div>
+                        <div class="col-xs-2">
+                                <p class="item"><span id="guest"></span></p>
+                        </div>
+
+                    </div>
+
+                    <div id="arena" class="row">
+
+                        <div id="blood_left_div"  class="col-xs-2">
+                            <img id="blood_left" src="">
+                        </div>
+
+                        <div id="cowboy_left_div"  class="col-xs-2">
+                            <div class="cowboy_img_wrapper">
+                                <img id="cowboy_left" src="{% static 'images/gunster_idle.gif' %}"/>
+                            </div>
+                        </div>
+
+                        <div id="host_info"  class="col-xs-2 info">
+                            <div id="host_miss" class="miss"> miss -3 hp </div>
+                            <div id="host_right" class="right"> right </div>
+                        </div>
+
+                        <div id="guest_info"  class="col-xs-2 info">
+                            <div id="guest_miss" class="miss"> miss -3 hp </div>
+                            <div id="guest_right" class="right"> right</div>
+                        </div>
+
+                        <div id="cowboy_right_div"  class="col-xs-2">
+                            <img id="cowboy_right" src="{% static 'images/cowboy_idle.gif' %}" />
+                        </div>
+
+                        <div id="blood_right_div"  class="col-xs-2">
+                            <img id="blood_right" src=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='button-attack-box' class="row">
+                    <div class="col-xs-3">
+                    </div>
+
+                    <div class="col-xs-6">
+                        <button id="btn-attack" class="btn btn-danger" onclick="attack()"> Attack </button>
+                    </div>
+
+                    <div class="col-xs-3">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                    <p id="question-text"></p>
+                    </div>
+                </div>
+
+                <div id="mylog" class="row">
+
+                </div>
+
+                <div class="row">
+                    <div id="buttons-box" class="col-xs-12">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="surrender-box" class="col-xs-12">
+                        <btn id="surrender-button" class="btn btn-link" onclick="surrender()"> surrender and leave </btn>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ContainerModal" class="modal">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <p id="winner"></p>
+        </div>
+    </div>
+
+    {% endif %}
+
+{% endblock content %}
+
+{% block javascript %}
+
+
+    <script>
+        var blood_left = '{% static "images/blood_left_500ms_1loop.gif"%}'
+        var blood_right = "{% static 'images/blood_right_500ms_1loop.gif' %}"
+        var cowboy_left_idle = '{% static "images/gunster_idle.gif"%}'
+        var cowboy_left_shoot = '{% static "images/gunster_shoot_500ms_1loop.gif"%}'
+        var cowboy_right_idle = '{% static "images/cowboy_idle.gif"%}'
+        var cowboy_right_shoot = '{% static "images/cowboy_shooting_500ms_1loop.gif" %}'
+    </script>
+
+    <script src="{% static 'client.js' %}"></script>
+
+{% endblock javascript%}

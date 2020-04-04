@@ -1,0 +1,23 @@
+# https://coverage.readthedocs.io/en/latest/config.html
+
+[run]
+branch = True
+include = testfighters/apps/*
+omit =
+    *migrations*
+    *tests*
+    conftest.py
+    */__init__.py
+    */apps.py
+    */admin.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    def __str__
+    if self.debug:
+    if settings.DEBUG
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:

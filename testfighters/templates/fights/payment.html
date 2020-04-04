@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <form action="{% url 'checkout' %}" method="POST" style="text-align:center; padding: 2%">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="{{stripe_key}}"
+                    data-amount="200"
+                    data-name="Testfights"
+                    data-description="Lorem ipsum"
+                    data-image=""
+                    data-currency="usd">
+                </script>
+            </form>
+        </div>
+    </div>
+
+{% endblock content%}
