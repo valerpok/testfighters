@@ -4,7 +4,7 @@ Hello guys and girls, welcome to new fasinating project!
 <<<<<<< HEAD
 Eugene Martyn
 Vasia Korzavatykh
-Тут был clown Левиафан)))
+Тут был Левиафан)))
 meow-meow hi meow meow
 молоко и печеньки
 Valerii Pokrytiuk
