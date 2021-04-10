@@ -1,7 +1,7 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
-
+Vasia Korzavatykh
 
 ### Local Development
 #### Prerequisites
