@@ -1,4 +1,8 @@
 # testfighters
+
+Hello guys and girls, welcome to new fasinating project!
+
+
 ### Local Development
 #### Prerequisites
 - Docker ([Docker installation guide](https://docs.docker.com/install/#supported-platforms));
