@@ -1,11 +1,11 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
-Eugene Martyn
-Vasia Korzavatykh
-Тут был clown Левиафан)))
-meow-meow hi meow meow
-молоко и печеньки
+- Eugene Martyn
+- Vasia Korzavatykh
+- Тут был clown Левиафан)))
+- meow-meow hi meow meow
+- молоко и печеньки
 
 ### Local Development
 #### Prerequisites
