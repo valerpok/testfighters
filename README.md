@@ -6,6 +6,7 @@ Vasia Korzavatykh
 Тут был clown Левиафан)))
 meow-meow hi meow meow
 молоко и печеньки
+Valerii Pokrytiuk
 
 ### Local Development
 #### Prerequisites
