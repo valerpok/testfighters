@@ -1,7 +1,11 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
+
 Vasia Korzavatykh
+Тут был clown Левиафан)))
+
+meow-meow hi meow meow
 
 ### Local Development
 #### Prerequisites
