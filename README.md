@@ -1,12 +1,20 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
+<<<<<<< HEAD
 Eugene Martyn
 Vasia Korzavatykh
 Тут был clown Левиафан)))
 meow-meow hi meow meow
 молоко и печеньки
 Valerii Pokrytiuk
+=======
+- Eugene Martyn
+- Vasia Korzavatykh
+- Тут был clown Левиафан)))
+- meow-meow hi meow meow
+- молоко и печеньки
+>>>>>>> 53f07cab9d834463e052ae5acd764ddd6315877e
 
 ### Local Development
 #### Prerequisites
