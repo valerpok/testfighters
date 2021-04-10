@@ -5,7 +5,7 @@ Valerii Pokrytiuk
 Тут был clown Левиафан)))
 
 meow-meow hi meow meow
-
+молоко и печеньки
 ### Local Development
 #### Prerequisites
 - Docker ([Docker installation guide](https://docs.docker.com/install/#supported-platforms));
