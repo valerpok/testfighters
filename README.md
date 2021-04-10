@@ -1,7 +1,7 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
-
+Eugene Martyn
 
 ### Local Development
 #### Prerequisites
