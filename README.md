@@ -1,7 +1,7 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
-Тут был Левиафан)))
+Тут был clown Левиафан)))
 
 
 ### Local Development
