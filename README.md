@@ -1,7 +1,7 @@
 # testfighters
 
 Hello guys and girls, welcome to new fasinating project!
-
+Nikerman
 
 ### Local Development
 #### Prerequisites
@@ -22,7 +22,7 @@ You can find all environment variables under ```docker/``` directory. This is ho
 docker
 ├── app
 │   ...
-│   └── .env
+│   └── .env
 └── db
     ...
     └── .env
